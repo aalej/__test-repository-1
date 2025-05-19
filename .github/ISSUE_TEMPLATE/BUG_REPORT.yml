@@ -38,7 +38,7 @@ body:
       placeholder: "macOS Sequoia 15.4.1"
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: is-using-vs-code-extension
     attributes:
       label: Are you using the Firebase Data Connect VS code extension?
