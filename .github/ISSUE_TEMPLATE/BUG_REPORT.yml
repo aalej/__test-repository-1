@@ -51,10 +51,7 @@ body:
       description: Firebase Data Connect VS Code extension version?
       placeholder: "1.4.0"
     validations:
-      required: true
-    rules:
-      - type: required
-        message: Please describe the bug.
+      required: 
         if:
           is-using-vs-code-extension:
             - Yes
