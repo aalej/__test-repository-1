@@ -31,6 +31,21 @@ body:
       placeholder: "14.4.0"
     validations:
       required: true
+  - type: textarea
+    id: bug-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required:
+        if:
+          - issue-type
+          - Bug Report
   - type: input
     attributes:
       label: Platform
