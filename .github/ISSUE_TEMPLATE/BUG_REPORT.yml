@@ -43,8 +43,8 @@ body:
     attributes:
       label: Are you using the Firebase Data Connect VS code extension?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
   - type: textarea
     attributes:
       label: Firebase Data Connect VS Code extension version
