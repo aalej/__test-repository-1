@@ -38,13 +38,33 @@ body:
       placeholder: "macOS Sequoia 15.4.1"
     validations:
       required: true
+  - type: checkboxes
+    id: is-using-vs-code-extension
+    attributes:
+      label: Are you using the Firebase Data Connect VS code extension?
+      options:
+        - label: Yes
+        - label: No
+  - type: textarea
+    attributes:
+      label: Firebase Data Connect VS Code extension version
+      description: Firebase Data Connect VS Code extension version?
+      placeholder: "1.4.0"
+    validations:
+      required: true
+    rules:
+      - type: required
+        message: Please describe the bug.
+        if:
+          is-using-vs-code-extension:
+            - Yes
   - type: textarea
     attributes:
       label: Test Case
       description: |
         Provide a minimal, complete, and verifiable example (http://stackoverflow.com/help/mcve) 
     validations:
-      required: true
+      required: false
   - type: textarea
     attributes:
       label: Steps to reproduce the issue
