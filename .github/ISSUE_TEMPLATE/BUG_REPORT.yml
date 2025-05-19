@@ -31,21 +31,6 @@ body:
       placeholder: "14.4.0"
     validations:
       required: true
-  - type: textarea
-    id: bug-reproduce
-    attributes:
-      label: Steps to reproduce
-      description: Steps to reproduce the behavior.
-      placeholder: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
-    validations:
-      required:
-        if:
-          - issue-type
-          - Bug Report
   - type: input
     attributes:
       label: Platform
@@ -53,23 +38,16 @@ body:
       placeholder: "macOS Sequoia 15.4.1"
     validations:
       required: true
-  - type: dropdown
-    id: is-using-vs-code-extension
-    attributes:
-      label: Are you using the Firebase Data Connect VS code extension?
-      options:
-        - "Yes"
-        - "No"
   - type: textarea
     attributes:
-      label: Firebase Data Connect VS Code extension version
-      description: Firebase Data Connect VS Code extension version?
-      placeholder: "1.4.0"
+      label: Other tool versions
+      description: If you're using other relevant tools like Node.js, Firebase Data Connect VS Code extension, etc. please list them?
+      placeholder: |
+        Node.js: v20.19.0
+        npm: v10.8.0
+        Firebase Data Connect VS Code extension: v1.4.0
     validations:
-      required: 
-        if:
-          is-using-vs-code-extension:
-            - Yes
+      required: false
   - type: textarea
     attributes:
       label: Test Case
