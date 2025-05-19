@@ -56,14 +56,14 @@ body:
     attributes:
       label: Expected behavior
       description: |
-        What is the _expected behavior? 
+        What is the _expected_ behavior? 
     validations:
       required: false
   - type: textarea
     attributes:
       label: Actual behavior
       description: |
-        What is the _actual behavior? 
+        What is the _actual_ behavior? 
     validations:
       required: false
   - type: textarea
@@ -71,7 +71,8 @@ body:
       label: Relevant Log Output
       description: |
         Please copy and paste any relevant log output. To enable debug
-        logging, add the `--debug` flag to your command. i.e. `firebase emulators:start --debug`
+        logging, add the `--debug` flag to your command. i.e. `firebase emulators:start --debug`.
+        You can also paste the contents of your `firebase-debug.log` file
       placeholder: |
         Paste your logs here. Please redact any personally identifiable
         information. This will be automatically formatted into code, so no
