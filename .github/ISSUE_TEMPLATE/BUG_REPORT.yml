@@ -1,162 +1,81 @@
 name: 🐞 Bug Report
 description: File a bug report if something is not working as expected.
-labels: []
+labels: ["type: bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Before getting started, make sure you are in the right place by
-        ensuring that filing a bug report is the correct course of
-        action for your issue.
+        To ensure you're on the right track, confirm that submitting 
+        a bug report is the best way to handle your issue.
 
-        * For general technical questions, post a question on
+        * For technical questions, post a question on
         [StackOverflow](http://stackoverflow.com/) with the `firebase` tag.
 
-        * For backend, console, and other non-SDK issues, reach out to
+        * For general questions on CLI usage, please take a look at the guide 
+        first: https://firebase.google.com/docs/cli/
+
+        * For backend, console, and other non-CLI issues, reach out to
         [Firebase Support](https://firebase.google.com/support/) for help.
 
-        If your issue does not fall under the above categories and instead
-        involves code in this repository not working as expected, please
-        complete and submit this bug report. Thank you!
-  - type: textarea
+        If your issue doesn't fit the description above and is related to the 
+        code in this repository not working correctly, please fill out this 
+        form and submit this bug report. Thank you!
+
+        If you know how to solve the issue, please create a Pull Request, and 
+        we'd be happy to review it!
+        
+  - type: input
     attributes:
-      label: Description
-      description: |
-        Describe the issue. Explain what you _expected_ to happen and what
-        _actually_ happened.
+      label: Firebase Tools Version
+      description: What version of Firebase Tools has this issue? You can find the latest versions in https://github.com/firebase/firebase-tools/releases
+      placeholder: "14.4.0"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Platform
+      description: What Platform are you using? i.e. macOS, Windows, Ubuntu, etc.
+      placeholder: "macOS Sequoia 15.4.1"
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Reproducing the issue
+      label: Test Case
       description: |
-        Please provide either **steps to reproduce** or a [**minimal reproducible example**](https://stackoverflow.com/help/minimal-reproducible-example).
-        Providing a minimal reproducible example will help us triage your issue
-        faster.
+        Provide a minimal, complete, and verifiable example (http://stackoverflow.com/help/mcve) 
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce the issue
+      description: |
+        Provide the steps needed to reproduce the issue with the above test case.
     validations:
       required: false
-  - type: input
+  - type: textarea
     attributes:
-      label: Firebase SDK Version
-      description: What version of Firebase has this issue?
-      placeholder: "10.9"
+      label: Expected behavior
+      description: |
+        What is the _expected behavior? 
     validations:
-      required: true
-  - type: input
+      required: false
+  - type: textarea
     attributes:
-      label: Xcode Version
-      description: What version of Xcode is being used?
-      placeholder: "15.3"
+      label: Actual behavior
+      description: |
+        What is the _actual behavior? 
     validations:
-      required: true
-  - type: dropdown
-    attributes:
-      label: Installation Method
-      description: How did you add Firebase to your project?
-      options:
-        - Swift Package Manager
-        - CocoaPods
-        - Zip
-        - Carthage
-        - N/A
-    validations:
-      required: true
-  - type: dropdown
-    attributes:
-      label: Firebase Product(s)
-      description: Which Firebase products are being used?
-      multiple: true
-      options:
-        - AB Testing
-        - Analytics
-        - App Check
-        - App Distribution
-        - Authentication
-        - Crashlytics
-        - Database
-        - Data Connect
-        - DynamicLinks
-        - Firestore
-        - Functions
-        - In-App Messaging
-        - Installations
-        - ML Model Downloader
-        - Messaging
-        - Performance
-        - Remote Config
-        - Storage
-        - VertexAI
-        - All
-        - Infrastructure
-    validations:
-      required: true
-  - type: dropdown
-    attributes:
-      label: Targeted Platforms
-      description: What Apple platform(s) is the issue affecting?
-      multiple: true
-      options:
-        - iOS
-        - tvOS
-        - watchOS
-        - macOS
-        - macCatalyst
-        - visionOS
-        - App Extensions
-        - All
-        - N/A
-    validations:
-      required: true
+      required: false
   - type: textarea
     attributes:
       label: Relevant Log Output
       description: |
-        Please copy and paste any relevant log output. To enable Firebase debug
-        logging, add `-FIRDebugEnabled` to your scheme's launch arguments.
+        Please copy and paste any relevant log output. To enable debug
+        logging, add the `--debug` flag to your command. i.e. `firebase emulators:start --debug`
       placeholder: |
         Paste your logs here. Please redact any personally identifiable
         information. This will be automatically formatted into code, so no
         need for backticks.
       render: shell
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: If using Swift Package Manager, the project's Package.resolved
-      description: The `Package.resolved` can help us debug versioning issues.
-      value: |
-        <!--- Look below for instructions on how to share your Package.resolved. --->
-
-        <details>
-        <summary>Expand <code>Package.resolved</code> snippet</summary>
-        <br>
-
-        ```json
-
-        Replace this line with the contents of your Package.resolved.
-
-        ```
-
-        </details>
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: If using CocoaPods, the project's Podfile.lock
-      description: The `Podfile.lock` can help us debug versioning issues.
-      value: |
-        <!--- Look below for instructions on how to share your Podfile.lock. --->
-
-        <details>
-        <summary>Expand <code>Podfile.lock</code> snippet</summary>
-        <br>
-
-        ```yml
-
-        Replace this line with the contents of your Podfile.lock!
-
-        ```
-
-        </details>
     validations:
       required: false
