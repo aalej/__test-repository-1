@@ -5,24 +5,25 @@ body:
   - type: markdown
     attributes:
       value: |
-        To ensure you're on the right track, confirm that submitting 
-        a bug report is the best way to handle your issue.
+        Thank you for contributing to the Firebase Community!
 
-        * For technical questions, post a question on
-        [StackOverflow](http://stackoverflow.com/) with the `firebase` tag.
+       Have a feature request?
+        ========================
+        Great, we love hearing how we can improve our products! However, do not use this template to submit a feature request. Please submit your feature requests to: https://firebase.google.com/support/contact/bugs-features/
 
-        * For general questions on CLI usage, please take a look at the guide 
-        first: https://firebase.google.com/docs/cli/
+        Have a usage question?
+        =======================
+        We get lots of those and we love helping you, but GitHub is not the best place for them and they will be closed. Please take a look at the [Firebase CLI documentation](https://firebase.google.com/docs/cli/) first: 
+        If the official documentation doesn't help, try asking through our official [support channel](https://firebase.google.com/support/).
+        You can also post a question on[StackOverflow](http://stackoverflow.com/) with the `firebase` tag.
+        
+        Have a backend, console, and other non-CLI issues?
+        =======================
+        This repository might not be the best place to address this issue, please reach out to [Firebase Support](https://firebase.google.com/support/) for help.
 
-        * For backend, console, and other non-CLI issues, reach out to
-        [Firebase Support](https://firebase.google.com/support/) for help.
-
-        If your issue doesn't fit the description above and is related to the 
-        code in this repository not working correctly, please fill out this 
-        form and submit this bug report. Thank you!
-
-        If you know how to solve the issue, please create a Pull Request, and 
-        we'd be happy to review it!
+        Think you found a bug?
+        =======================
+        Yeah, we're definitely not perfect! Please use this template to provide information about the issue. If you know how to solve the issue, please create a Pull Request, and we'd be happy to review it!
         
   - type: input
     attributes:
@@ -41,7 +42,7 @@ body:
   - type: textarea
     attributes:
       label: Other tool versions
-      description: If you're using other relevant tools like Node.js, Firebase Data Connect VS Code extension, etc. please list them?
+      description: If you're using other relevant tools like Node.js, Firebase Data Connect VS Code extension, etc. please list them.
       placeholder: |
         Node.js: v20.19.0
         npm: v10.8.0
@@ -60,6 +61,10 @@ body:
       label: Steps to reproduce the issue
       description: |
         Provide the steps needed to reproduce the issue with the above test case.
+      placeholder: |
+        1. Run the command '...'
+        2. Click on '....'
+        2. See error '...'
     validations:
       required: false
   - type: textarea
@@ -67,6 +72,8 @@ body:
       label: Expected behavior
       description: |
         What is the _expected_ behavior? 
+      placeholder: |
+        The Firebase CLI should have...
     validations:
       required: false
   - type: textarea
@@ -74,6 +81,8 @@ body:
       label: Actual behavior
       description: |
         What is the _actual_ behavior? 
+      placeholder: |
+        The Firebase CLI threw an error message '...'
     validations:
       required: false
   - type: textarea
